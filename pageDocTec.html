@@ -1,0 +1,386 @@
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: content-box;
+}
+.container{
+    
+    width:100%;
+    height: 100%;
+    /*background-color: blue;*/
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    font-family: "Work Sans", sans-serif !important; 
+
+}
+.caja-lateral-der{
+    width:70%;
+    height:auto;/* ojo despues cambiar por auto*/
+    background-color:#fff;
+    margin:0;
+    padding:0;
+    position:absolute;
+    right: 0;    
+}
+
+
+
+.caja-lateral-izq{
+    width:30%;
+    height:auto; /* ojo despues cambiar por auto*/
+    margin:0;
+    padding:0;
+    position: fixed;
+    bottom:0;
+    top:0;
+    left:0;
+    
+       
+}
+
+@media all and (max-width:960px)
+{
+    .container{
+        flex-direction: column;
+    }
+    
+    .caja-lateral-izq{
+        position: relative;
+        width:100%; 
+        height: 15rem;    
+
+    }
+    .caja-lateral-der{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+}
+
+.nav-bar{
+    width:100%;
+    height:100%;
+    
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+}
+.headers{
+    font-size: 3vw;
+    font-weight: 10rem;
+    font-family: "Work Sans", sans-serif !important; 
+    display:flex;
+    justify-content: center;
+    align-items: center;  
+     
+}
+.barra-nav{
+    overflow-x:hidden;
+    overflow-y: scroll;
+    
+}
+.caja-width-100{
+    width:100%;
+    height:auto;
+    font-size: 1.5vw;
+    font-weight: 20rem;
+    margin:0 0 0.5px 0;
+    padding:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.caja-redonda{
+    border-bottom: 1px solid rgba(0,0,0,0.578);
+}
+
+.caja-header-bar{
+    width:100%;
+    margin:0;
+    padding:5px;
+    height: auto;
+    background-color:#d64cA8;  
+}
+.nav-link{
+    text-decoration:none;
+    color: #000;
+}
+.borrar-punto{
+    list-style-type: none;
+}
+.thumbnail-header{
+    box-shadow: 0 2px 20px rgba(0,0,0,0.19), 0 2px 6px rgba(0,0,0,0.23);
+}
+.thumbnail:hover{
+    background: rgba(0,0,0,0.19);
+}
+.main-section{
+    margin: 2rem;
+    font-size: 1.5vw;
+    
+}
+.main-section header{
+    font-weight: bold;
+    font-size: 3vw;
+    text-align: Left;
+}
+@media (max-width:700px)
+{
+    .headers{
+        font-size: 8vw;
+    }
+    .caja-width-100{
+        font-size: 4vw;
+    }   
+    .main-section{
+        font-size: 3vw;
+    }
+    .main-section header{
+        font-size: 6vw
+    }
+}
+.main-section p{
+    margin-top:1rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.main-section ul{
+    margin-left:2.5rem;
+    margin-top: 1rem;
+    
+    text-align: justify;
+}
+code{
+    margin: 0rem;
+    padding: 1rem;
+    display: block;
+    height: auto;
+    width:auto;
+    background-color: rgba(0,0,0,0.19);
+    font-family: monospace;
+    border-radius: 4px;
+}
+
+</style>
+
+<div class="container">
+    
+    <header id="caja-lateral-i" class="caja-lateral-izq">        
+        <nav id="navbar" class="nav-bar">
+            <header class="headers caja-header-bar thumbnail-header">C++</header>
+            <ul class="barra-nav borrar-punto">
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#C++_features">C++ features</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Hello_world">Hello world</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Data_types">Data types</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Principles">Principles</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#The_concept_of_class">The concept of class</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Constructors">Constructors</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Destroyers">Destroyers</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Templates">Templates</a></li>
+                <li><a class="nav-link caja-width-100 caja-redonda thumbnail" href="#Reference">Reference</a></li>
+                                
+            </ul>
+        </nav>
+    </header>
+    <main  id="main-doc" class="caja-lateral-der">
+       
+        
+        
+        <section id="Introduction" class="main-section">
+            <header>Introduction</header>
+            <p>C ++ is a programming language designed in 1979 by Bjarne Stroustrup . The intention of its creation was to extend to the C programming language mechanisms that allow the manipulation of objects . In that sense, from the point of view of object-oriented languages , C ++ is a hybrid language.</p>
+            <p>Later, generic programming facilities were added , which were added to the structured programming and object-oriented programming paradigms . This is why it is often said that C ++ is a multiparadigm programming language .</p>
+            <p>There is now a standard, called ISO C ++, that most modern compiler manufacturers have adhered to. There are also some interpreters, such as ROOT.</p>
+            <p>The name "C ++" was proposed by Rick Mascitti in 1983, when the language was used for the first time outside of a scientific laboratory. Earlier the name "C with classes" had been used. In C ++, the term "C ++" means "increment of C" and refers to C ++ being an extension of C.</p>
+            
+            
+        </section>
+        <section id="C++_features" class="main-section">
+            <header>C++ features</header>
+            <ul class="">
+                <li>Its syntax is inherited from the C language.</li>
+                <li>Object-oriented program (OOP).</li>
+                <li>Allows grouping of instructions.</li>
+                <li>Very didactic language, with this language you can learn many other languages ​​with great ease.</li>
+                <li>It is portable and has a large number of compilers on different platforms and operating systems.</li>
+                <li>It allows the separation of a program into modules that support independent compilation.</li>
+                <li>It is a high level language.</li>
+            </ul>
+        </section>
+        <section id="Hello_world" class="main-section">
+            <header>Hello world</header>
+            <p>The following is an example Hello World program written in C ++</p>
+            <code><br>
+                #include <iostream> <br/>              
+                using namespace std; <br/>           
+                int main() <br/>
+                { <br/>
+                   cout << "Hola mundo" << endl;<br/>
+                    return 0;<br/>
+                }<br/>
+            </code>
+            <p>Using the directive #includetells the compiler to find and interpret all the elements defined in the file that accompanies the directive (in this case, iostream). To avoid overwriting the elements already defined by giving them the same name, the namespaces or namespacethe singular in English were created. In this case there is a namespace std, which is where the definitions of all the functions and classes that make up the included library standard C ++. By including the statement using namespace stdwe are telling the compiler that we will use the namespace stdso we will not have to include it when we use elements from this namespace, such as objects coutandcin, which represent the standard output stream (typically the screen or a text window) and the standard input stream (typically the keyboard).</p>
+            <p>The definition of functions is the same as in C, except for the characteristic that if you are mainnot going to collect arguments, we do not have to put them, unlike C, where you had to put them explicitly, even if they were not going to be used. It remains only to comment that the symbol "<<" is known as an insertion operator, and roughly it is sending coutwhat we want to show on the screen to paint it, in this case the string "Hola mundo". The same operator "<<" can be used several times in the same statement, so that thanks to this feature we can concatenate the object endlat the end, the result of which will be to print a line return.</p>
+        </section>
+        <section id="Data_types" class="main-section">
+            <header>Data types</header>
+            <p>C ++ has the following fundamental types :</p>
+            
+            <ul class="">
+                <li>Characters: <strong>char</strong> (is also an integer), <strong>wchar_t</strong></li>
+                <li>Stamped: <strong>short, int, long,long long</strong></li>
+                <li>Floating point numbers: <strong> float, double,long double</strong></li>
+                <li>Booleans: <strong>bool</strong> </li>
+                <li>Empty: <strong>void</strong> </li>
+                
+            </ul>                
+            
+        </section>
+        <section id="Principles" class="main-section">
+            <header>Principles</header>
+            <p>Every C ++ program must have the main function main()(unless another entry point is specified at compile time, which is actually the function that has the main())</p>
+            <code>int main() {}</code>
+            <p>The main function of the main source code must have one of the following prototypes:</p>
+            <p>int main ()</p>
+            <p>int main (int argc, char ** argv)</p>
+            <p>Although it is not standard some implementations allow 
+                int main (int argc, char ** argv, char ** env)
+                The first is the default form of a program that takes no parameters or arguments. The second form has two parameters: argc , a number that describes the number of arguments in the program (including the name of the program itself), and argv , a pointer to an array of pointers, of argc elements, where the element argv [i] represents the i- th argument delivered to the program. In the third case, the possibility of being able to access the execution environment variables is added in the same way as the program's arguments, but reflected on the env variable .
+                
+                The return type of main is an int integer value . At the end of the function main, the return value must be included (for example, return 0 ;, although the standard foresees only two possible return values: EXIT_SUCCESS and EXIT_FAILURE, defined in the cstdlib file ), or exit through the exit function . Alternatively it can be left blank, in which case the compiler is responsible for adding the appropriate output.
+                
+                </p>
+            
+           
+        </section>
+        <section id="The_concept_of_class" class="main-section">
+            <header>The concept of class</header>
+            <p>Objects in C ++ are abstracted through a class. According to the paradigm of object-oriented programming an object consists of:</p>
+            <ul class="">
+                <li>Identity, which differentiates it from other objects (Name that will take the class to which said object belongs).</li>
+                <li>Member functions or methods.</li>
+                <li>Attributes or member variables.</li>
+            </ul> 
+            <p>An example of a class that we can take is the dog class. Each dog shares characteristics (attributes). Its number of legs, the color of its coat or its size are some of its attributes. The functions that make him bark, change his behavior ... those are the functions of the class.<br>
+
+                This is another example of a class:</p>
+            <code><br>
+                class  Point <br>
+                { <br>
+                // by default, members are 'private' so they can only be modified from within the class itself. <br>
+                private : <br>
+                        // Private member variable <br>
+                        int  id ; <br>
+                protected : <br>
+                        // Protected member variables <br>
+                        int  x ; <br>
+                        int  and ; <br>
+                public : <br>
+                        // Constructor <br>
+                        Point (); <br>
+                        // Destroyer <br>
+                        ~ Point (); <br>
+                        // Member functions or methods <br>
+                        int  GetX (); <br>
+                        int  GetY (); <br>
+                };<br>
+            </code>
+                       
+            
+        </section>
+        <section id="Constructors" class="main-section">
+            <header>Constructors</header>
+            <p>Constructors They are special methods that are automatically executed when creating an object of the class. Their declaration does not specify the type of data they return, and they have the same name as the class to which they belong. Like other methods, there can be multiple overloaded constructors, although there cannot be virtual constructors.<br>
+                As a special feature when implementing a constructor, just after the declaration of the parameters, there is what is called "initializer list". Its objective is to call the constructors of the attributes that make up the object to be built.<br>
+                It should be noted that it is not necessary to declare a constructor like a destructor, since the compiler can do it, although it is not the best way to program.<br>
+                Taking the example of the Point Class, if we want that every time an object of this class is created the coordinates of the point are equal to zero we can add a constructor as shown below:
+
+            </p>
+            <code><br>
+            class  Point <br>
+            { <br>
+              public : <br>
+              <br>
+              float  x ;   // Coordinates of the <br>
+              float  point y ; <br>
+              <br>
+                            // Constructor <br>
+              Point ()  :  x ( 0 ),  y ( 0 ) {  // We initialize the variables "x" and "y" <br>
+              } <br>
+            }; <br>
+            <br>
+            // Main to demonstrate the operation of the class <br>
+            <br>
+            # include <iostream> // This allows us to use "cout" <br>
+                <br>
+            using  namespace  std ; <br>
+            <br>
+            int  main  ()  { <br>
+              Point  MyPoint ;         // we create an element of the Point class called MyPoint <br>
+              <br>
+              cout  <<  "X coordinate:"  <<  MyPoint . x  <<  endl ;     // we show the accumulated value in the variable x <br>
+              cout  <<  "Y coordinate:"  <<  MyPoint . and  <<  endl ;     // we show the accumulated value in the variable and <br>
+              getchar ();  // we tell the program to wait for the input buffer (stop) <br>
+              return  0 ; <br>
+            }<br>
+            <br>
+            </code>
+        
+        </section>
+        <section id="Destroyers" class="main-section">
+            <header>Destroyers</header>
+            <p>Destructors are special member functions called automatically at program execution, and therefore do not have to be explicitly called by the programmer . Its main tasks are:</p>
+            <ul class="">
+                <li>Release the computational resources that the object of that class has acquired at runtime upon expiration.</li>
+                <li>Remove the links that other resources or objects could have with it.</li>
+                
+            </ul> 
+            <p>Destructors are invoked automatically when the flow of the program reaches the end of the scope in which the object is declared. The only case in which the destructor of an object must be explicitly invoked is when it was created using the new operator, that is, it lives in heap memory, and not in the program execution stack. Invocation of the destructor of an object that lives in heap is done through the delete or delete [] operator for arrays. Example:</p>
+            <code><br>
+                int  main ()  { <br>
+                int  * anInteger  =  new  int ( 12 );          // we assign an integer in heap memory with the value 12 <br>
+                int  * arrayOfIntegers  =  new  int [ 25 ];  // we allocate memory for 25 integers (they are not initialized) <br>
+                delete  anInteger ;                      // we free the memory occupied by an Integer <br>
+                delete []  arrayOfIntegers ;            // we free the memory occupied by arrayDeEnteros <br>
+                return  0 ; <br>
+              }<br>
+            </code>
+            <p>If the delete and delete [] operators were not used in that case, the memory occupied by anInteger and arrayOfIntegers, respectively, would be meaninglessly occupied. When a portion of memory is occupied by a variable that is no longer used, and there is no way to access it, it is called a 'memory leak'. In large applications, if a lot of memory leaks occur, the program can end up taking up considerably more RAM than it should, which is not convenient at all. This is why heap memory management must be used consciously.<br>
+             There are two types of destructors, they can be public or private, depending on whether they are declared:
+            </p>
+            <ul class="">
+                <li>If it is public, it is called from anywhere in the program to destroy the object.</li>
+                <li>If it is private, the destruction of the object by the user is not allowed.</li>
+                
+            </ul>
+            <p>The use of destructors is key in the concept of Acquiring Resources is Initializing .</p>
+        </section>
+        <section id="Templates" class="main-section">
+            <header>Templates</header>
+            <p>Templates are the C ++ mechanism for implementing the generic programming paradigm . They allow a class or function to work with abstract data types, specifying later which ones you want to use. For example, it is possible to construct a generic vector that can contain any type of data structure. In this way it is possible to declare objects of the class of this vector that contain integers, floats, polygons, figures, personnel cards, etc.</p>
+            <p>The declaration of a template is done by prepending the declaration template <typename A, ....> to the declaration of the desired structure (class, structure or function).
+            <br> For example:</p>
+            <code><br>template <typename T><br>
+                T max(const T &x, const T &y) {<br>
+                  return (x > y) ? x : y; //si x > y, retorna x, sino retorna y<br>
+                }<br>
+            </code>
+        </section>
+        <section id="Reference" class="main-section">
+            <header>Reference</header>
+            <p>All the documentation in this page is taken from <a href="https://devdocs.io/cpp/" target="_blank">devdocs.io</a></p>
+            
+        </section>
+        
+        
+
+    </main>
+    
+</div>
